@@ -10,3 +10,5 @@ Usa un archivo main.c para verificar que ft_printf imprime correctamente cada co
 Compila(gcc -Wall -Wextra -Werror main.c SRCS/*.c libft/*.c -o test_ft_printf -I./libft)
 Ejecuta main.c (./test_ft_printf)
 
+hacer todos los makes, (gcc -o test main.c libftprintf.a -Wall -Wextra -Werror) o (gcc -o test main_NULL.c libftprintf.a -Wall -Wextra -Werror), ./test
+
