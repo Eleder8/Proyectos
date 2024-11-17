@@ -13,8 +13,7 @@
 
 /*Función para '%c'*/
 
-int     print_char(va_list args)
+int	ft_print_char(va_list args)
 {
-        return (ft_putchar(va_arg(args, int)));
+	return (ft_putchar(va_arg(args, int)));
 }
-

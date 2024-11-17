@@ -5,30 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 13:56:42 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/13 09:05:55 by eloizaga         ###   ########.fr       */
+/*   Created: 2024/11/13 10:00:00 by eloizaga          #+#    #+#             */
+/*   Updated: 2024/11/17 18:14:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	main(void)
 {
-	int	len;
+	int	ret;
 
-	len = ft_printf("Carácter impreso: %c\n", 'A');
-	ft_printf("ft_printf devolvió: %d\n", len);
-	len = ft_printf("String impreso: %s\n", "Hola, Mundo");
-	ft_printf("ft_printf devolvió: %d\n", len);
-	len = ft_printf("Número entero impreso: %d\n", 12345);
-	ft_printf("ft_printf devolvió: %d\n", len);
-	len = ft_printf("Número hexadecimal minus: %x\n", 255);
-	ft_printf("ft_printf devolvió: %d\n", len);
-	len = ft_printf("Número hexadecimal mayus: %X\n", 255);
-	ft_printf("ft_printf devolvió: %d\n", len);
-	len = ft_printf("Puntero impreso: %p\n", &len);
-	ft_printf("ft_printf devolvió: %d\n", len);
-	len = ft_printf("Símbolo de porcentaje impreso: %%\n");
-	ft_printf("ft_printf devolvió: %d\n", len);
+	printf("Prueba de ft_print_char:\n");
+	ret = ft_putchar('A');
+	printf("\nDevuelve: %d (esperado: 1)\n\n", ret);
+	printf("Prueba de ft_print_string:\n");
+	ret = ft_putstr("Hola Mundo");
+	printf("\nDevuelve: %d (esperado: 10)\n\n", ret);
+	printf("Prueba de ft_print_pointer:\n");
+	ret = ft_putpointer(123456);
+	printf("\nDevuelve: %d (esperado: 7)\n\n", ret);
+	printf("Prueba de ft_print_int:\n");
+	ret = ft_putnbr(-42);
+	printf("\nDevuelve: %d (esperado: 3)\n\n", ret);
+	printf("Prueba de ft_print_unsigned:\n");
+	ret = ft_putnbr_unsigned(12345);
+	printf("\nDevuelve: %d (esperado: 5)\n\n", ret);
+	printf("Prueba de ft_print_hex (minúsculas):\n");
+	ret = ft_putnbr_hex(255, 'x');
+	printf("\nDevuelve: %d (esperado: 2)\n\n", ret);
+	printf("Prueba de ft_print_hex (mayúsculas):\n");
+	ret = ft_putnbr_hex(255, 'X');
+	printf("\nDevuelve: %d (esperado: 2)\n\n", ret);
 	return (0);
 }

@@ -6,12 +6,13 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:15:10 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/14 14:16:06 by eloizaga         ###   ########.fr       */
+/*   Updated: 2024/11/17 19:37:05 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 #include <stdarg.h>
+#include "../libft/libft.h"
 
 /*-"ft_printf" imprime texto en la pantalla recorriendo el string de formato
 "format". Cuando encuentra "%" (especificador de formato), llama a la función
@@ -53,7 +54,7 @@ int	ft_handle_conversion(char format, va_list args)
 {
 	if (format == 'c')
 		return (ft_print_char(args));
-	else if (format ==  's')
+	else if (format == 's')
 		return (ft_print_string(args));
 	else if (format == 'p')
 		return (ft_print_pointer(args));
@@ -71,7 +72,7 @@ int	ft_handle_conversion(char format, va_list args)
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	int	printed_chars
+	int		printed_chars;
 
 	printed_chars = 0;
 	va_start(args, format);

@@ -13,8 +13,8 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdarg.h> // Para manejar arguemntos variables
-# include <unistd.h> // Para la funcion write
+# include <stdarg.h>
+# include <unistd.h>
 # include "libft/libft.h"
 
 /*Prototipo de ft_printf y de ft_handle_conversion*/

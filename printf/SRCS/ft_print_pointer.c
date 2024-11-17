@@ -15,5 +15,5 @@
 
 int	ft_print_pointer(va_list args)
 {
-	return (ft_print_pointer(va_arg(args, unsigned long long)));
+	return (ft_putpointer(va_arg(args, unsigned long long)));
 }
