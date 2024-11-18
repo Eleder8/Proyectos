@@ -6,7 +6,7 @@
 /*   By: eloizaga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 10:02:19 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/13 11:22:21 by eloizaga         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:02:16 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,10 @@ int	ft_putnbr(int n)
 
 	count = 0;
 	if (n == -2147483648)
-		return (ft_putstr("-2147483648"));
+	{
+		count += ft_putstr("-2147483648");
+		return (count);
+	}
 	if (n < 0)
 	{
 		count += ft_putchar('-');

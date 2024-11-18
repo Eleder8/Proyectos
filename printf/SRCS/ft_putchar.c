@@ -6,11 +6,10 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 09:31:58 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/17 17:09:55 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/18 14:24:16 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../ft_printf.h"
+#include <unistd.h>
 
 /*-ft_putchar toma un carácter 'c' y lo imprime en la pantalla(salida estandar)
 con write.
@@ -20,5 +19,6 @@ el número de caracteres impresos.*/
 
 int	ft_putchar(char c)
 {
-	return (write(1, &c, 1));
+	write(1, &c, 1);
+	return (1);
 }

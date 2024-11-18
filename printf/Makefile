@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/31 11:50:31 by eloizaga          #+#    #+#              #
-#    Updated: 2024/11/17 18:39:50 by marvin           ###   ########.fr        #
+#    Updated: 2024/11/18 11:13:05 by eloizaga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,27 +26,31 @@ SRCS = SRCS/ft_printf.c SRCS/ft_print_char.c SRCS/ft_print_string.c \
 
 OBJS = $(SRCS:.c=.o)
 
-#Ruta de libft
+# Ruta de libft
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-#Reglas principales
+# Reglas principal
 all: $(NAME)
 
+# Compila la biblioteca libft
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
 
+# Regla para crear la librería estática libftprintf.a
 $(NAME): $(OBJS) $(LIBFT)
-	ar rcs $(NAME) $(LIBFT) $(OBJS)
+	ar rcs $(NAME) $(OBJS) $(LIBFT)
 
+# Elimina los archivos objeto
 clean:
 	rm -f $(OBJS)
 	$(MAKE) clean -C $(LIBFT_DIR)
 
+# Elimina los archivos objeto y la librería estática
 fclean: clean
 	rm -f $(NAME)
 	$(MAKE) fclean -C $(LIBFT_DIR)
-
+# Vuelve a compilar todo
 re: fclean all
 
 .PHONY: all clean fclean re

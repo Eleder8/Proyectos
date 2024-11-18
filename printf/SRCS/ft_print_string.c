@@ -6,7 +6,7 @@
 /*   By: eloizaga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:43:42 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/14 11:21:01 by eloizaga         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:44:15 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../ft_printf.h"
@@ -15,5 +15,8 @@
 
 int	ft_print_string(va_list args)
 {
-	return (ft_putstr(va_arg(args, char *)));
+	char	*str;
+
+	str = va_arg(args, char *);
+	return (ft_putstr(str));
 }

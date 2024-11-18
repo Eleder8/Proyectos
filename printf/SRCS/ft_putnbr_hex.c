@@ -6,7 +6,7 @@
 /*   By: eloizaga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:22:55 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/13 14:46:22 by eloizaga         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:04:28 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,7 @@ int	ft_putnbr_hex(unsigned int n, char format)
 	else
 		base = "0123456789ABCDEF";
 	if (n >= 16)
-	{
 		count += ft_putnbr_hex(n / 16, format);
-	}
 	count += ft_putchar(base[n % 16]);
 	return (count);
 }

@@ -6,10 +6,10 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 09:38:13 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/17 22:01:10 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/18 13:36:47 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <unistd.h>
 #include "../ft_printf.h"
 
 /*-ft_putstr recibe un string de caracteres 'str' y lo imprime en la pantalla

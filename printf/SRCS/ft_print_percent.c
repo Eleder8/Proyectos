@@ -6,7 +6,7 @@
 /*   By: eloizaga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:58:40 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/14 11:33:27 by eloizaga         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:08:50 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../ft_printf.h"
@@ -15,5 +15,6 @@
 
 int	ft_print_percent(void)
 {
-	return (ft_putchar('%'));
+	ft_putchar('%');
+	return (1);
 }

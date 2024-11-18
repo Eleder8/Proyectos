@@ -6,10 +6,11 @@
 /*   By: eloizaga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:43:23 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/14 09:50:09 by eloizaga         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:36:46 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../ft_printf.h"
+#include <unistd.h>
 
 /*Imprime un dirección de memoria en formato hexadecimal (puntero) y devuelve
 el número total de caracteres impresos en pantalla.*/
@@ -42,6 +43,7 @@ int	ft_putpointer(unsigned long long ptr)
 	count = 0;
 	if (!ptr)
 		return (ft_putstr("(nil)"));
+	}
 	count += ft_putstr("0x");
 	count += ft_putnbr_hex(ptr, 'x');
 	return (count);

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:34:46 by eloizaga          #+#    #+#             */
-/*   Updated: 2024/11/14 11:18:47 by eloizaga         ###   ########.fr       */
+/*   Updated: 2024/11/18 10:46:49 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdlib.h>
 # include "libft/libft.h"
 
 /*Prototipo de ft_printf y de ft_handle_conversion*/
