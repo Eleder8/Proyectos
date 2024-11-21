@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+#include <stdarg.h>
+#include <unistd.h>
+/*#include <stdio.h>*/
 
 /*-"ft_putnbr" recibe un número entero ('int') 'n' y lo imprime en la pantalla
 carácter por carácter. Devuelve la cantidad total de caracteres impresos,
@@ -67,3 +70,19 @@ int	ft_putnbr(int n)
 	count += ft_putchar((n % 10) + '0');
 	return (count);
 }
+/*
+int	main(void)
+{
+	int	ret;
+
+	printf("Prueba de ft_putnbr:\n");
+	ret = ft_putnbr(12345);
+	printf("\nDevuelve: %d (esperado: 5)\n\n", ret);
+	ret = ft_putnbr(-42);
+	printf("\nDevuelve: %d (esperado: 3)\n\n", ret);
+	ret = ft_putnbr(0);
+	printf("\nDevuelve: %d (esperado: 1)\n\n", ret);
+	ret = ft_putnbr(-2147483648);
+	printf("\nDevuelve: %d (esperado: 11)\n\n", ret);
+	return (0);
+}*/

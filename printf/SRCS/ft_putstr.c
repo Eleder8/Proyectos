@@ -9,9 +9,10 @@
 /*   Updated: 2024/11/18 13:36:47 by eloizaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 #include "../ft_printf.h"
-
+#include <unistd.h>
+#include <stdarg.h>
+/*#include <stdio.h>*/
 /*-ft_putstr recibe un string de caracteres 'str' y lo imprime en la pantalla
 carácter por carácter usando ft_putchar. Devuelve los caracteres impresos.*/
 
@@ -45,3 +46,19 @@ int	ft_putstr(char *str)
 	}
 	return (count);
 }
+/*
+int	main(void)
+{
+	int		ret;
+	char	*str;
+
+	str = "Hola Mundo";
+	printf("Prueba de ft_putstr:\n");
+	ret = ft_putstr(str);
+	printf("\nDevuelve: %d (esperado: 10)\n\n", ret);
+	str = NULL;
+	printf("Prueba de ft_putstr con NULL:\n");
+	ret = ft_putstr(str);
+	printf("\nDevuelve: %d (esperando: 6)\n\n", ret);
+	return (0);
+}*/

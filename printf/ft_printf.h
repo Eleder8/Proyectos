@@ -18,11 +18,11 @@
 # include <stdlib.h>
 # include "libft/libft.h"
 
-/*Prototipo de ft_printf y de ft_handle_conversion*/
+/*Funciones de impresión*/
 int	ft_printf(const char *format, ...);
 int	ft_handle_conversion(char format, va_list args);
 
-/*Prototipos de funciones básicas de impresión*/
+/*Funciones auxiliares para impresión*/
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putnbr(int n);
@@ -30,7 +30,7 @@ int	ft_putnbr_unsigned(unsigned int n);
 int	ft_putnbr_hex(unsigned int n, char format);
 int	ft_putpointer(unsigned long long ptr);
 
-/*Prototipos de las funciones auxiliares*/
+/*Funciones de conversión de ft_printf*/
 int	ft_print_char(va_list args);
 int	ft_print_string(va_list args);
 int	ft_print_pointer(va_list args);

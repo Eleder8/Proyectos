@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "../ft_printf.h"
+#include <stdarg.h>
 #include <unistd.h>
-
+/*#include <stdio.h>*/
 /*Imprime un dirección de memoria en formato hexadecimal (puntero) y devuelve
 el número total de caracteres impresos en pantalla.*/
 
@@ -42,9 +43,29 @@ int	ft_putpointer(unsigned long long ptr)
 
 	count = 0;
 	if (!ptr)
-		return (ft_putstr("(nil)"));
+	{
+		count += ft_putstr("(nil)");
 	}
-	count += ft_putstr("0x");
-	count += ft_putnbr_hex(ptr, 'x');
+	else
+	{
+		count += ft_putstr("0x");
+		count += ft_putnbr_hex(ptr, 'x');
+	}
 	return (count);
 }
+/*
+int	main(void)
+{
+	int	ret;
+	void	*ptr;
+
+	printf("Prueba de ft_putpointer (puntero no nulo):\n");
+	ptr = (void*)123456;
+	ret = ft_putpointer((unsigned long long)ptr);
+	printf("\nDevuelve: %d (esperado: 7)\n\n", ret);
+	printf("Prueba de ft_putpointer (puntero nulo):\n");
+	ptr = NULL;
+	ret = ft_putpointer((unsigned long long)ptr);
+	printf("\nDevuelve: %d (esperado: 5)\n\n", ret);
+	return (0);
+}*/

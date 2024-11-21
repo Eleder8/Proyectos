@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "../ft_printf.h"
+#include <unistd.h>
+/*#include <stdio.h>*/
 
 /*Función para '%%'*/
 
@@ -18,3 +20,13 @@ int	ft_print_percent(void)
 	ft_putchar('%');
 	return (1);
 }
+/*
+int	main(void)
+{
+	int	ret;
+
+	printf("Prueba de ft_print_percent a través de ft_printf:\n");
+	ret = ft_printf("%%");
+	printf("\nDevuelve: %d (esperado: 1)\n\n", ret);
+	return (0);
+}*/

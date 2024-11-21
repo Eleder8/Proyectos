@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+#include <stdarg.h>
+#include <unistd.h>
+/*#include <stdio.h>*/
 
 /*"ft_putnbr_unsigned" recibe un número entero sin signo  'n', lo imprime en
 pantalla y devuelve el número total de caracteres impresos.*/
@@ -43,3 +46,19 @@ int	ft_putnbr_unsigned(unsigned int n)
 	count += ft_putchar((n % 10) + '0');
 	return (count);
 }
+/*
+int	main(void)
+{
+	int	ret;
+
+	printf("Prueba de ft_putnbr_unsigned:\n");
+	ret = ft_putnbr_unsigned(12345);
+	printf("\nDevuelve: %d (esperado: 5)\n\n", ret);
+	printf("Prueba de ft_putnbr_unsigned (cero):\n");
+	ret = ft_putnbr_unsigned(0);
+	printf("\nDevuelve: %d (esperado: 1)\n\n", ret);
+	printf("Prueba de ft_putnbr_unsigned (máximo valor):\n");
+	ret = ft_putnbr_unsigned(4294967295);
+	printf("\nDevuelve: %d (esperado: 10)\n\n", ret);
+	return (0);
+}*/

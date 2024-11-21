@@ -12,3 +12,4 @@ Ejecuta main.c (./test_ft_printf)
 
 hacer todos los makes, (gcc -o test main.c libftprintf.a -Wall -Wextra -Werror) o (gcc -o test main_NULL.c libftprintf.a -Wall -Wextra -Werror), ./test
 
+probar los main que hay dentro de cada funcion: ejemplo con ft_putchar "gcc -o ft_putchar_test ft_putchar.c -Wall -Wextra -Werror"

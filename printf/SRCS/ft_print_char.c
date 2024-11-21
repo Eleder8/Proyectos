@@ -10,10 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "../ft_printf.h"
+#include <unistd.h>
+#include <stdarg.h>
+/*#include <stdio.h>*/
 
-/*Función para '%c'*/
+/*Gestiona la conversión del formato '%c'*/
+/*"ft_print_char" imprime un carácter y devuelve el número de caracteres que
+ ha impreso*/
 
 int	ft_print_char(va_list args)
 {
 	return (ft_putchar(va_arg(args, int)));
 }
+/*
+int	main(void)
+{
+	int	ret;
+
+	printf("Prueba de ft_print_char a través de ft_printf:\n");
+	ret = ft_printf("%c", 'A');
+	printf("\nDevuelve: %d (esperado: 1)\n\n", ret);
+	return (0);
+}*/

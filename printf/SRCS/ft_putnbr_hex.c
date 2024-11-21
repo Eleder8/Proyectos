@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+#include <stdarg.h>
+#include <unistd.h>
+/*#include <stdio.h>*/
 
 /*"ft_putnbr_hex": Imprime números en formato hexadecimal (%x o %X) y devolverá
 el número total de caracteres impresos.*/
@@ -60,3 +63,22 @@ int	ft_putnbr_hex(unsigned int n, char format)
 	count += ft_putchar(base[n % 16]);
 	return (count);
 }
+/*
+int	main(void)
+{
+	int	ret;
+
+	printf("Prueba de ft_putnbr_hex (minúsculas):\n");
+	ret = ft_putnbr_hex(255, 'x');
+	printf("\nDevuelve: %d (esperado: 2)\n\n", ret);
+	printf("Prueba de ft_putnbr_hex (mayúsculas):\n");
+	ret = ft_putnbr_hex(255, 'X');
+	printf("\nDevuelve: %d (esperado: 2)\n\n", ret);
+	printf("Prueba de ft_putnbr_hex (minúscula cero):\n");
+	ret = ft_putnbr_hex(0, 'x');
+	printf("\nDevuelve: %d (esperado: 1)\n\n", ret);
+	printf("Prueba de ft_putnbr_hex (mayúscula cero):\n");
+	ret = ft_putnbr_hex(0, 'X');
+	printf("\nDevuelve: %d (esperado: 1)\n\n", ret);
+	return (0);
+}*/
