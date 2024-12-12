@@ -1,0 +1,12 @@
+Pasar norminette
+
+hacer el make para compilar
+
+para probar los archivos main que se encuentran dentro de las funciones debemos escribir este comando:
+Por ejemplo si es ft_strchr: gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 ft_strchr.c -o test
+y para verlo en pantalla ./test
+
+si es para probar el main con el que comprobamos que get_next_line.c funciona debemos escribir este comando:
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c ft_strlen.c ft_strdup.c ft_strchr.c ft_substr.c ft_strjoin.c main.c -o test_get_next_line
+ despues debemos ejecutar este comando:
+./test_get_next_line

@@ -1,0 +1,13 @@
+Compilación y Generación de la Biblioteca:
+Ejecuta los comandos make, make clean, make fclean, y make re.
+el Makefile debe compilar el proyecto correctamente y generar libftprintf.a. (make)
+
+Conformidad con norminette:
+Asegúrate de que todos los archivos .c y .h cumplen con las normas de norminette. (norminette)
+
+Comprobación de los main que hay dentro de cada funcion:
+-Hacer el make
+-Ahora por ejemplo probamos el ft_print_int poniendo el siguiente comando (hay que quitar /* y */ del codigo para que funcione el main):
+"gcc -o test ft_print_int.c ft_putnbr.c ft_printf.c ../libftprintf.a -Wall -Wextra -Werror"
+Despues ponemos ./test para ejecutar el test.
+Una vez comprado si se quiere probar otra función debemos volver a poner los /* y */ que hemos quitado del codigo y hacer el make clean, make fclean y volver a hacer el make.
